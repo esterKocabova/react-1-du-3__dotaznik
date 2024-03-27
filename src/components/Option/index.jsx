@@ -1,12 +1,10 @@
 import { Icon } from '../Icon/index';
 import './style.css';
 
-export const Option = ({type, text}) => {
-  const handleClick = () => {
-    console.log("spíše souhlasím")
-  }
+export const Option = ({type, text, onSelected}) => {
+
   return (
-    <div onClick={handleClick} className="option">
+    <div onClick={onSelected} className="option">
       <Icon type={type} />
       <div>{text}</div>
     </div>
